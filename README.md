@@ -114,6 +114,19 @@ The [full results gallery](docs/RESULTS.md) contains additional scenes across mu
 
 For the full system map, data contracts, and deployment boundaries, read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
+## A real Temporal-V5 code slice
+
+The showcase now includes the actual public inference-side implementation of the Temporal-V5 residual expert:
+
+```python
+from temporal_v5 import TemporalV5ResidualExpert, apply_temporal_v5
+
+expert = TemporalV5ResidualExpert()
+result = apply_temporal_v5(expert, current_tokens, future_tokens, pose, boxes)
+```
+
+It contains the causal dilated temporal blocks, future-token attention, bounded residuals, identity initialization, and observability-aware reliability gate. The frozen world-model producer, checkpoints, private training losses, and final production alarm head remain outside the public release. See [`reference/README.md`](reference/README.md).
+
 ## Why this is not the full source tree
 
 The public repository deliberately excludes:
