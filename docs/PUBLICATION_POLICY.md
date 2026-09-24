@@ -6,12 +6,13 @@ This repository is intentionally curated for a public engineering profile. The s
 
 - architecture, design principles, and service boundaries;
 - redacted JSON contracts and a non-secret configuration shape;
+- a bounded public slice of the Temporal-V5 inference module;
 - evidence framing, lifecycle semantics, and evaluation caveats;
 - a static presentation page suitable for GitHub Pages.
 
 ## Withheld
 
-- source for the core inference, fusion, training, and policy modules;
+- source for the private world-model producer, multimodal fusion, training losses, and production alarm head;
 - model checkpoints, embeddings, datasets, captured video/audio, and test exports;
 - API keys, device IDs, network addresses, cloud configuration, and personal documents;
 - generated environments, local caches, experiment runners, and vendor forks.
