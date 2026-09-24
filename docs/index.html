@@ -24,6 +24,16 @@
       <article><strong>5</strong><span>auditable event lifecycle states</span></article>
     </section>
     <section class="map-card"><img src="architecture.svg" alt="SentinelFlow architecture map"></section>
+    <section class="gallery">
+      <div class="section-head"><div><div class="eyebrow">VISUAL AUDIT</div><h2>See the signal.<br><em>See the miss.</em></h2></div><a href="RESULTS.md" class="button ghost">Open full gallery</a></div>
+      <div class="gallery-grid">
+        <figure class="wide"><img src="assets/results/true-positive-falls.jpg" alt="True positive fall detections"><figcaption><b>TRUE POSITIVE</b><span>falling → fallen · confidence trace</span></figcaption></figure>
+        <figure><img src="assets/results/true-negative-adl.jpg" alt="True negative daily activity"><figcaption><b>TRUE NEGATIVE</b><span>daily activity rejected</span></figcaption></figure>
+        <figure><img src="assets/results/temporal-alarm.jpg" alt="Temporal alarm with pose overlay"><figcaption><b>RUNTIME ALARM</b><span>pose + world + future warning</span></figcaption></figure>
+        <figure><img src="assets/results/false-positive-adl.jpg" alt="False positive hard case"><figcaption><b>HARD NEGATIVE</b><span>sit / lie transition</span></figcaption></figure>
+        <figure><img src="assets/results/false-negative-falls.jpg" alt="False negative hard case"><figcaption><b>FAILURE ANALYSIS</b><span>occlusion / ambiguity</span></figcaption></figure>
+      </div>
+    </section>
     <section class="split">
       <div><div class="eyebrow">THE THESIS</div><h2>Models observe.<br>Policy protects.</h2></div>
       <div class="copy"><p>SentinelFlow separates perception from action. A detector can produce an observation; only the policy layer can create an operator-visible event. That separation makes confidence, degradation, acknowledgement, and audit explicit.</p><p>The public release exposes the system vocabulary and integration boundary while keeping private implementation, weights, and data outside the repository.</p></div>

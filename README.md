@@ -51,6 +51,49 @@ These figures are an internal engineering snapshot from the underlying research 
 
 \* Internal pose-transformer evaluation on a held-out UR-Fall split; GPU timings measured on an RTX 4060 Ti-class setup. See [the evaluation note](docs/EVALUATION.md) for scope and caveats.
 
+## Detection gallery
+
+The gallery is split into **wins**, **hard negatives**, and **failure analysis**. Green borders show accepted or correctly rejected windows; red borders are retained because a serious safety system must make its blind spots reviewable.
+
+<table>
+<tr>
+<td width="50%"><img src="docs/assets/results/true-positive-falls.jpg" alt="True positive fall detections"></td>
+<td width="50%"><img src="docs/assets/results/true-negative-adl.jpg" alt="True negative daily activity"></td>
+</tr>
+<tr>
+<td align="center"><sub>TRUE POSITIVE · falling / fallen · confidence trace</sub></td>
+<td align="center"><sub>TRUE NEGATIVE · daily activity rejected</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/assets/results/temporal-alarm.jpg" alt="Temporal multimodal fall alarm"></td>
+<td width="50%"><img src="docs/assets/results/future-warning.jpg" alt="Future warning result"></td>
+</tr>
+<tr>
+<td align="center"><sub>RUNTIME VIEW · pose + world + future-warning evidence</sub></td>
+<td align="center"><sub>EARLY WARNING · temporal lead signal</sub></td>
+</tr>
+</table>
+
+<p align="center"><img src="docs/assets/results/results-overview.jpg" alt="Cross-scene detection overview" width="960"></p>
+
+<details>
+<summary><b>Open the hard cases and error audit</b></summary>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/assets/results/false-positive-adl.jpg" alt="False positive daily activity windows"></td>
+<td width="50%"><img src="docs/assets/results/false-negative-falls.jpg" alt="False negative fall windows"></td>
+</tr>
+<tr>
+<td align="center"><sub>FALSE POSITIVE · sit / lie transitions resembling a fall</sub></td>
+<td align="center"><sub>FALSE NEGATIVE · occlusion and ambiguous posture</sub></td>
+</tr>
+</table>
+
+</details>
+
+The [full results gallery](docs/RESULTS.md) contains additional scenes across multiple camera layouts and dataset families. These examples are review artifacts, not a claim of universal performance.
+
 ## Architecture
 
 ```text
