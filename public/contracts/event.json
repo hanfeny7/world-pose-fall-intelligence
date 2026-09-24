@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SentinelFlow Event",
+  "type": "object",
+  "required": ["id", "state", "severity", "reason_code", "evidence"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+    "state": {"enum": ["observed", "verified", "escalated", "acknowledged", "resolved"]},
+    "severity": {"enum": ["info", "guarded", "high", "critical"]},
+    "reason_code": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "evidence": {
+      "type": "object",
+      "required": ["modalities", "quality"],
+      "properties": {
+        "modalities": {"type": "array", "items": {"type": "string"}},
+        "quality": {"type": "number", "minimum": 0, "maximum": 1},
+        "pointer": {"type": ["string", "null"], "description": "Access-controlled evidence reference."}
+      }
+    }
+  },
+  "additionalProperties": false
+}

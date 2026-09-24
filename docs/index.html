@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SentinelFlow — multimodal human-safety intelligence system profile.">
+  <title>SentinelFlow · System Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <nav class="nav"><span class="wordmark">SENTINEL<span>FLOW</span></span><span class="nav-note">PUBLIC SYSTEM PROFILE / 2026.09</span></nav>
+    <section class="hero">
+      <div class="eyebrow">MULTIMODAL HUMAN-SAFETY INTELLIGENCE</div>
+      <h1>Evidence that<br><em>earns attention.</em></h1>
+      <p class="lede">A private, production-oriented research platform that turns video, pose, temporal context, and optional audio into reviewable safety events.</p>
+      <div class="hero-actions"><a href="../README.md" class="button primary">Read the architecture</a><a href="EVALUATION.md" class="button ghost">Inspect the evidence</a></div>
+      <div class="hero-glow"></div>
+    </section>
+    <section class="metrics">
+      <article><strong>93.75%</strong><span>best internal validation snapshot</span></article>
+      <article><strong>&lt;5 ms</strong><span>pose path on GPU-class hardware</span></article>
+      <article><strong>4×</strong><span>evidence streams designed to cooperate</span></article>
+      <article><strong>5</strong><span>auditable event lifecycle states</span></article>
+    </section>
+    <section class="map-card"><img src="architecture.svg" alt="SentinelFlow architecture map"></section>
+    <section class="gallery">
+      <div class="section-head"><div><div class="eyebrow">VISUAL AUDIT</div><h2>See the signal.<br><em>See the miss.</em></h2></div><a href="RESULTS.md" class="button ghost">Open full gallery</a></div>
+      <div class="gallery-grid">
+        <figure class="wide"><img src="assets/results/true-positive-falls.jpg" alt="True positive fall detections"><figcaption><b>TRUE POSITIVE</b><span>falling → fallen · confidence trace</span></figcaption></figure>
+        <figure><img src="assets/results/true-negative-adl.jpg" alt="True negative daily activity"><figcaption><b>TRUE NEGATIVE</b><span>daily activity rejected</span></figcaption></figure>
+        <figure><img src="assets/results/temporal-alarm.jpg" alt="Temporal alarm with pose overlay"><figcaption><b>RUNTIME ALARM</b><span>pose + world + future warning</span></figcaption></figure>
+        <figure><img src="assets/results/false-positive-adl.jpg" alt="False positive hard case"><figcaption><b>HARD NEGATIVE</b><span>sit / lie transition</span></figcaption></figure>
+        <figure><img src="assets/results/false-negative-falls.jpg" alt="False negative hard case"><figcaption><b>FAILURE ANALYSIS</b><span>occlusion / ambiguity</span></figcaption></figure>
+      </div>
+    </section>
+    <section class="split">
+      <div><div class="eyebrow">THE THESIS</div><h2>Models observe.<br>Policy protects.</h2></div>
+      <div class="copy"><p>SentinelFlow separates perception from action. A detector can produce an observation; only the policy layer can create an operator-visible event. That separation makes confidence, degradation, acknowledgement, and audit explicit.</p><p>The public release exposes the system vocabulary and integration boundary while keeping private implementation, weights, and data outside the repository.</p></div>
+    </section>
+    <footer><span>SentinelFlow / showcase release</span><span>Private implementation · public architecture</span></footer>
+  </main>
+</body>
+</html>

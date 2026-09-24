@@ -1,0 +1,26 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private research artifacts
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.safetensors
+*.mp4
+*.mov
+*.wav
+*.zip
+datasets/
+weights/
+artifacts/
+
+# Local tooling
+.venv/
+node_modules/
+__pycache__/
+.DS_Store

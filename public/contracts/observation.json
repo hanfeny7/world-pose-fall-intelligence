@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SentinelFlow Observation",
+  "type": "object",
+  "required": ["id", "observed_at", "source", "quality", "modalities"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-zA-Z0-9_-]+$"},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "source": {"type": "string", "description": "Opaque source handle; never a network address."},
+    "quality": {"type": "number", "minimum": 0, "maximum": 1},
+    "modalities": {
+      "type": "object",
+      "required": ["available", "contributing"],
+      "properties": {
+        "available": {"type": "array", "items": {"type": "string"}},
+        "contributing": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "pose": {"type": ["object", "null"], "description": "Redacted pose summary, not raw keypoints."},
+    "model_revision": {"type": "string"}
+  },
+  "additionalProperties": false
+}

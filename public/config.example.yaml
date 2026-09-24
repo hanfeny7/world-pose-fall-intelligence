@@ -1,0 +1,17 @@
+version: 1
+service:
+  name: sentinelflow-edge
+  environment: demo
+  bind: 127.0.0.1
+  port: 5000
+inference:
+  modalities: [video, pose, temporal]
+  optional_modalities: [audio]
+  observation_contract: public-contract-v1
+policy:
+  lifecycle: observed-verified-escalated-acknowledged-resolved
+  human_review_required: true
+privacy:
+  store_raw_media: false
+  retention_days: 0
+  redact_identifiers: true
