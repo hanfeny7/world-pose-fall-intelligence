@@ -10,6 +10,7 @@ This directory is the small amount of code intentionally published with the syst
 - a reviewable event-policy state machine;
 - a dependency-free demo that emits one verified event;
 - TypeScript types for a console or mobile client.
+- streaming windows, robust smoothing, calibration metrics, event storage, and tests.
 
 ## Withheld by design
 
@@ -19,6 +20,8 @@ Run the dependency-free event demo from this directory:
 
 ```powershell
 python .\python\demo.py
+python -m unittest discover -s .\tests -v
+python .\python\run_temporal_v5.py --frames 12
 ```
 
 The output is synthetic and contains no private media or credentials.
