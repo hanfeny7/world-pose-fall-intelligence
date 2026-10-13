@@ -112,7 +112,7 @@ The [full results gallery](docs/RESULTS.md) contains additional scenes across mu
                                                             └──────────────┘
 ```
 
-For the full system map, data contracts, and deployment boundaries, read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+For the full system map, data contracts, and deployment boundaries, read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The public reference tree contains a line-counted implementation and tests; see [`reference/LINE_COUNT.md`](reference/LINE_COUNT.md).
 
 ## A real Temporal-V5 code slice
 
